@@ -111,6 +111,7 @@ h1{
     font-size: 16px;
     color: #333;
     font-weight: 600;
+    margin-top: 70px;
 }
 
 .caixa .remember-forgot{
@@ -118,17 +119,6 @@ h1{
     justify-content: space-between;
     font-size: 14.5px;
     margin: -15px 0 15px;
-}
-.caixa .registerlink{
-    font-size: 14.5px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-.registerlink p a{
-    color: #000000;
-    text-decoration: none;
-    font-weight: 600;
 }
 
 .remember-forgot label input{
