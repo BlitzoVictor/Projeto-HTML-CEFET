@@ -1,0 +1,30 @@
+body{
+    background-color: #0F0D3C;
+}
+
+.nave{
+    color: #FFFFFF;
+    padding-left: 180px;
+}
+
+.naveF{
+    color: #FFFFFF;
+    display: inline;
+}
+
+article{
+    background-color: #8996EA;
+    width: 610px;
+    height: 390px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.carrossel{
+    background-color: #96A3F4;
+    opacity: 30%;
+    width: 1200px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
