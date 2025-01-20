@@ -1,8 +1,8 @@
 ** A SE FAZER **
 
-- Tela de Home
-- Tela de Login
-- Tela de "esqueci minha senha"
+- Tela de Home (Organizar elementos e estilo)
+- Tela de Login (estilizar)
+- Tela de "esqueci minha senha" (estilizar)
 - Tela de detalhamento (para quando se clicar no jogo e ver suas informações)
 
 ** PALETA DE CORES **
