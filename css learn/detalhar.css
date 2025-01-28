@@ -4,18 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", serif;
+    font-family: "Poppins", serif; 
 }
 body{
     background-color: #181555;
     color: white;
-}
-article{
-    background-color: #8996EA;
-    width: 610px;
-    height: 390px;
-    margin-left: auto;
-    margin-right: auto;
 }
 header{
     /*background-color: #96A3F4;
@@ -24,14 +17,6 @@ header{
     width: 100%;
     height: 50px;
 }
-/*.nave{
-    color: #FFFFFF;
-    padding-left: 180px;
-}
-.naveF{
-    color: #FFFFFF;
-    display: inline;
-}*/
 .login{
     float: right; /*comentar do float*/
     padding: 8px;
@@ -47,7 +32,6 @@ header{
 .carrosel-games {
     padding: 100px;
     padding-left: 60px;
-    background-color:orange;
     display: flex;
     background-image: url(imagens/game-fundo-blackflag.jpg);
 }
@@ -56,31 +40,6 @@ header{
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(105, 105, 105, 0.18);
     box-shadow: 0 15px 32px 0 rgba(0, 0, 0, 0.37);
-}
-.roleta-games {
-    text-align: center;
-    padding-bottom: 25%;
-}
-.card {
-    display: inline-block;
-    margin: 50px;
-    text-align: center;
-    border-radius: 10%;
-    border: 2px solid #ffffff; 
-    background-color: #0F0D3C;
-}
-.game-info{
-    display: flex;
-}
-.redonda{
-    border-radius: 10%;
-}
-.setinha-meio{
-    display: inline-block;
-    vertical-align:100%;
-}
-.setinha-inicio{
-    padding-top: 6%;
 }
 .botao1{
     background-color: white;
@@ -113,4 +72,26 @@ header{
 }
 .botao2:hover{
     background-color: rgb(226, 226, 226);
+}
+.infos-games{
+    padding-top: 20px; 
+    text-align: center;
+}
+.system-requirements {
+    background-color: #181555;
+    padding: 20px;
+    margin: 20px 0;
+}
+.requirements-table {
+    width: 100%;
+    border-collapse: collapse;
+    padding-left: 18%;
+}
+.requirements-table th, .requirements-table td {
+    border: 1px solid #c0c0c9;
+    padding: 8px;
+    text-align: center;
+}
+.requirements-table th {
+    background-color: #181555;
 }
