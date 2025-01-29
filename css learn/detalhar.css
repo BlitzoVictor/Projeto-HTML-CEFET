@@ -34,6 +34,8 @@ header{
     padding-left: 60px;
     display: flex;
     background-image: url(imagens/game-fundo-blackflag.jpg);
+    background-size: cover;
+    background-color: #181555;
 }
 .blur{
     backdrop-filter: blur(10px);
@@ -79,13 +81,14 @@ header{
 }
 .system-requirements {
     background-color: #181555;
-    padding: 20px;
-    margin: 20px 0;
+    padding-top: 10%;
+    padding-left: 50%;
+    position: relative;
 }
 .requirements-table {
     width: 100%;
     border-collapse: collapse;
-    padding-left: 18%;
+    
 }
 .requirements-table th, .requirements-table td {
     border: 1px solid #c0c0c9;

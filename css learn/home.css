@@ -47,9 +47,11 @@ header{
 .carrosel-games {
     padding: 100px;
     padding-left: 60px;
-    background-color:orange;
+    background-color: #181555;
     display: flex;
     background-image: url(imagens/game-fundo-blackflag.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .blur{
     backdrop-filter: blur(10px);
