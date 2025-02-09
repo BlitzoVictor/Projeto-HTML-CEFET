@@ -5,7 +5,7 @@ const email = document.getElementById('email-input');
 const repetesenha = document.getElementById('repete-senha');
 const erroMensagem = document.getElementById('erro-mensagem');
 
-// Adiciona evento de submit ao formulário
+
 form.addEventListener('submit', (event) => {
     let errors = getSignupFormErrors(usuario, email, senha, repetesenha);
 
@@ -20,7 +20,6 @@ form.addEventListener('submit', (event) => {
 function getSignupFormErrors(usuario, email, senha, repetesenha) {
     let errors = [];
 
-    // Remove classes de erro antes de validar
     [usuario, email, senha, repetesenha].forEach(input => input.parentElement.classList.remove('incorreto'));
 
     if (usuario.value.trim() === '') {
@@ -47,7 +46,7 @@ function getSignupFormErrors(usuario, email, senha, repetesenha) {
     return errors;
 }
 
-// Remove erro visual quando o usuário começa a digitar novamente
+
 [usuario, senha, email, repetesenha].forEach(input => {
     input.addEventListener('input', () => {
         input.parentElement.classList.remove('incorreto');
