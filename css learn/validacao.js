@@ -7,10 +7,10 @@ formLogin.addEventListener('submit', (event) => {
     let errors = getLoginFormErrors();
 
     if (errors.length > 0) {
-        event.preventDefault(); // Impede o envio do formulário
+        event.preventDefault();
         erroMensagemLogin.innerText = errors.join(", ");  
     } else {
-        erroMensagemLogin.innerText = ""; // Limpa os erros antes de redirecionar
+        erroMensagemLogin.innerText = ""; 
         window.location.href = "Home.html";
     }
 });
@@ -35,7 +35,7 @@ function getLoginFormErrors() {
     return errors;  
 }
 
-// Removendo erro visual quando o usuário começa a digitar novamente
+
 const allInputsLogin = [usuarioLogin, senhaLogin];
 
 allInputsLogin.forEach(input => {
