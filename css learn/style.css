@@ -128,7 +128,7 @@ h1 {
     text-decoration: underline;
 }
 
-/* Estilização para mensagens de erro */
+
 #erro-mensagem-login {
     color: red;
     font-size: 14px;
@@ -136,7 +136,7 @@ h1 {
     text-align: center;
 }
 
-/* Adiciona um contorno vermelho aos campos com erro */
+
 .incorreto input {
     border: 2px solid red !important;
 }
