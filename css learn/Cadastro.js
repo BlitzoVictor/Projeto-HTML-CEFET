@@ -1,68 +1,56 @@
-const form = document.getElementById('formulario') 
-const usuario = document.getElementById('usuario-input')
-const senha = document.getElementById('senha-input')
-const email = document.getElementById('email-input')
-const repetesenha = document.getElementById('repete-senha')
-const erro_mensagem = document.getElementById('erro-mensagem')
+const form = document.getElementById('formulario'); 
+const usuario = document.getElementById('usuario-input');
+const senha = document.getElementById('senha-input');
+const email = document.getElementById('email-input');
+const repetesenha = document.getElementById('repete-senha');
+const erroMensagem = document.getElementById('erro-mensagem');
 
-
+// Adiciona evento de submit ao formulário
 form.addEventListener('submit', (event) => {
-    let errors = []
-
-
-    errors = getSignupFormErrors(usuario.value, email.value, senha.value, repetesenha.value)
-
+    let errors = getSignupFormErrors(usuario, email, senha, repetesenha);
 
     if (errors.length > 0) {
         event.preventDefault(); 
-        erro_mensagem.innerText = errors.join(", ");
+        erroMensagem.innerText = errors.join(", ");
     } else {
-
         window.location.href = "Home.html";
     }
-
-})
+});
 
 function getSignupFormErrors(usuario, email, senha, repetesenha) {
-    let errors = []
+    let errors = [];
 
-    if (usuario.trim() === '') {
-        errors.push('Nome de usuário necessário')
-        usuario = document.getElementById('usuario-input')
-        usuario.parentElement.classList.add('incorreto')
+    // Remove classes de erro antes de validar
+    [usuario, email, senha, repetesenha].forEach(input => input.parentElement.classList.remove('incorreto'));
+
+    if (usuario.value.trim() === '') {
+        errors.push('Nome de usuário necessário');
+        usuario.parentElement.classList.add('incorreto');
     }
 
-    if (email.trim() === '') {
-        errors.push('Email necessário')
-        email = document.getElementById('email-input')
-        email.parentElement.classList.add('incorreto')
+    if (email.value.trim() === '') {
+        errors.push('Email necessário');
+        email.parentElement.classList.add('incorreto');
     }
 
-    if (senha.trim() === '') {
-        errors.push('Senha necessária')
-        senha = document.getElementById('senha-input')
-        senha.parentElement.classList.add('incorreto')
+    if (senha.value.trim() === '') {
+        errors.push('Senha necessária');
+        senha.parentElement.classList.add('incorreto');
     }
 
-    if (senha !== repetesenha) {
-        errors.push('As senhas precisam ser iguais')
-        senha = document.getElementById('senha-input')
-        repetesenha = document.getElementById('repete-senha')
-        senha.parentElement.classList.add('incorreto')
-        repetesenha.parentElement.classList.add('incorreto')
+    if (senha.value !== repetesenha.value) {
+        errors.push('As senhas precisam ser iguais');
+        senha.parentElement.classList.add('incorreto');
+        repetesenha.parentElement.classList.add('incorreto');
     }
 
     return errors;
 }
 
-
-const allInputs = [usuario, senha, email, repetesenha]
-
-allInputs.forEach(input => {
+// Remove erro visual quando o usuário começa a digitar novamente
+[usuario, senha, email, repetesenha].forEach(input => {
     input.addEventListener('input', () => {
-        if (input.parentElement.classList.contains('incorreto')) {
-            input.parentElement.classList.remove('incorreto')
-            erro_mensagem.innerText = ''
-        }
-    })
-})
+        input.parentElement.classList.remove('incorreto');
+        erroMensagem.innerText = '';
+    });
+});
