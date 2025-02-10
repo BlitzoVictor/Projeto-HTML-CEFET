@@ -24,14 +24,6 @@ header{
     width: 100%;
     height: 50px;
 }
-/*.nave{
-    color: #FFFFFF;
-    padding-left: 180px;
-}
-.naveF{
-    color: #FFFFFF;
-    display: inline;
-}*/
 .login{
     float: right; /*comentar do float*/
     padding: 8px;
@@ -49,7 +41,7 @@ header{
     padding-left: 60px;
     background-color: #181555;
     display: flex;
-    background-image: url(imagens/game-fundo-blackflag.jpg);
+    background-image: url(imagem-fundo/game-fundo-blackflag.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -115,4 +107,97 @@ header{
 }
 .botao2:hover{
     background-color: rgb(226, 226, 226);
+}
+
+/*carrossel*/
+
+.slider{
+    margin: 0 auto;
+    width: 1200px;
+    height: 400px;
+    overflow: hidden;
+    justify-content: center;
+}
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display:none;
+}
+.imagem{
+    width: 25%;
+    position: relative;
+    transition: 1s;
+    background-size: contain;
+}
+.imagem img{
+    width: 1200px;
+}
+.manual-nav{
+    position: absolute;
+    width: 1200px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid white;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.manual-btn:not(:last-child){
+    margin-right: 20px;
+}
+.manual-btn:hover{
+    background-color: white;
+}
+
+/*valores dos botões*/
+#r1:checked ~ .prim{
+    margin-left: 0;
+}
+#r2:checked ~ .prim{
+    margin-left: -25%;
+}
+#r3:checked ~ .prim{
+    margin-left: -50%;
+}
+#r4:checked ~ .prim{
+    margin-left: -75%;
+}
+
+/*botões preenchidos*/
+#r1:checked ~ .nav-auto .auto-btn1{
+    background-color: white;
+}
+#r2:checked ~ .nav-auto .auto-btn2{
+    background-color: white;
+}
+#r3:checked ~ .nav-auto .auto-btn3{
+    background-color: white;
+}
+#r4:checked ~ .nav-auto .auto-btn4{
+    background-color: white;
+}
+
+.nav-auto div{
+    border: 2px solid blue;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.nav-auto{
+    position: absolute;
+    width: 1200px;
+    margin-top: 415px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div:not(:last-child){
+    margin-right: 20px;
 }

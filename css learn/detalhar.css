@@ -33,7 +33,7 @@ header{
     padding: 100px;
     padding-left: 60px;
     display: flex;
-    background-image: url(imagens/game-fundo-blackflag.jpg);
+    background-image: url(imagem-fundo/game-fundo-blackflag.jpg);
     background-size: cover;
     background-color: #181555;
 }

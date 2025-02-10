@@ -28,6 +28,16 @@ h1 {
     text-align: center;
 }
 
+.caixa_esqueci {
+    width: 500px;
+    height: auto;
+    background-color: rgb(228, 225, 225);
+    color: #000000;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
 .caixa {
     width: 500px;
     height: auto;
